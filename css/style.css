@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 87.5%; 
+}
+
 #page-landing{
     min-height: 100vh;
     background: linear-gradient(329.54deg,#6418B0 100%, #421470 0%);
+}
+
+.mobile{
+    display: none;
 }
 
 #head-main{
@@ -44,4 +52,18 @@
     text-decoration: none;
     
     color: white;
+}
+
+@media(max-width: 600px){
+    .mobile{
+        display: block;
+    }
+    #img-menu-items img{
+        width: 5rem;
+        height: 5rem;
+        filter: invert(100%);
+    }
+    #head-main header #menu-items{
+        display: none;
+    }
 }
