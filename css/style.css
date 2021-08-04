@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#page-landing{
+    min-height: 100vh;
+    background: linear-gradient(329.54deg,#6418B0 100%, #421470 0%);
+}
+
+#head-main{
+    height: 8rem;
+    width: 100%;
+    background: #0E0E10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#head-main header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#head-main header #menu-items{
+    display: flex;
+    gap: 2.5rem;
+
+    list-style-type: none;
+
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.35rem;
+
+    cursor: pointer;
+}
+
+#head-main header #menu-items li a{
+    text-decoration: none;
+    
+    color: white;
+}
