@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
 }
 
 html{
@@ -45,30 +46,35 @@ html{
 
     list-style-type: none;
 
-    font-family:'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.35rem;
 
     cursor: pointer;
 }
 
+#head-main header #menu-items li a{
+    transition: color .3s;
+}
+#head-main header #menu-items li a:hover{
+    color: #5d1e9c;
+}
+
 #head-main header #menu-items #rede-item{
     display: flex;  
     justify-content: center;
 }
-
 #head-main header #menu-items #rede-item:hover #container-rede{
-    display:block
+    display:block;
 }
 
 #head-main header #menu-items #rede-item #container-rede{
     position: absolute;
 
-    display:none;
+    display: none;
 
     background-color: white;
     padding: .75rem 1rem;
-    top: 5rem;
+    top: 4.9rem;
 }
 
 #head-main header #menu-items #rede-item #container-rede #rede-menu{
@@ -76,14 +82,19 @@ html{
     display: flex;
     flex-direction: column;
     gap: .75rem;
-
-
 }
 
 #head-main header #menu-items #rede-item #container-rede a{
     list-style-type: none;
     color: black;
     text-decoration: none;
+
+    transition: color .2s;
+}
+
+#head-main header #menu-items #rede-item #container-rede a:hover{
+    text-decoration: underline;
+    color: #421470;
 }
 
 #head-main header #menu-items li a{
@@ -112,7 +123,7 @@ html{
         flex-direction: column;
         gap: 0;
 
-        background-color: #0E0E10;      
+        background-color: white;    
 
         padding: .5rem 1rem;
         width: 50vw;
@@ -122,10 +133,10 @@ html{
         transform: translateX(100%);
         transition: transform .3s ease-in;
     }
+    #head-main header #menu-items li a{
+        color: black;
+    }
     #head-main header #menu-items.mobile-bar-active{
         transform: translateX(0);
-    }
-    #head-main header #menu-items #rede-item #container-rede{
-        position: relative;
     }
 }
