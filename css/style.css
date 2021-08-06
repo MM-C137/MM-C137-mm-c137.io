@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 87.5%; 
+}
+
+#page-landing{
+    min-height: 100vh;
+    background: linear-gradient(329.54deg,#6418B0 100%, #421470 0%);
+}
+
+.mobile{
+    display: none;
+}
+
+#head-main{
+    height: 8rem;
+    width: 100%;
+    background: #0E0E10;
+    box-shadow: 0px 0px 3px black;
+    position:fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#head-main header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+
+#head-main header #menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.65rem;
+
+    list-style-type: none;
+
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.35rem;
+
+    cursor: pointer;
+}
+
+#head-main header #menu-items #rede-item #container-rede{
+    display: none;
+    position: absolute;
+
+    background-color: white;
+    padding: .45rem .5rem; 
+}
+
+#head-main header #menu-items #rede-item #container-rede #rede-menu{
+    list-style-type: none;
+}
+
+#head-main header #menu-items #rede-item #container-rede a{
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+}
+
+#head-main header #menu-items li a{
+    text-decoration: none;
+    
+    color: white;
+}
+
+@media(max-width: 600px){
+    .mobile{
+        display: block;
+    }
+    html{
+        overflow-x: hidden; 
+    }
+    #img-menu-items img{
+        width: 5rem;
+        height: 5rem;
+        filter: invert(100%);
+    }
+    #head-main header #menu-items{
+        position: absolute;
+        top: 8rem;
+        right: 0;
+
+        flex-direction: column;
+        gap: 0;
+
+        background-color: #0E0E10;      
+
+        padding: .5rem 1rem;
+        width: 50vw;
+        height: 50vh;
+        justify-content: space-around;
+
+        transform: translateX(100%);
+    }
+    #head-main header #menu-items.mobile-bar-active{
+        animation: mobile-bar-active .3s forwards ;
+    }
+
+    @keyframes mobile-bar-active{
+        from{
+            opacity: 0;
+            transform: translateX(100%); 
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    } 
+}
