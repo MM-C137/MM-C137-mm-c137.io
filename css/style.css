@@ -52,16 +52,32 @@ html{
     cursor: pointer;
 }
 
+#head-main header #menu-items #rede-item{
+    display: flex;  
+    justify-content: center;
+}
+
+#head-main header #menu-items #rede-item:hover #container-rede{
+    display:block
+}
+
 #head-main header #menu-items #rede-item #container-rede{
-    display: none;
     position: absolute;
 
+    display:none;
+
     background-color: white;
-    padding: .45rem .5rem; 
+    padding: .75rem 1rem;
+    top: 5rem;
 }
 
 #head-main header #menu-items #rede-item #container-rede #rede-menu{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+
 }
 
 #head-main header #menu-items #rede-item #container-rede a{
@@ -109,15 +125,7 @@ html{
     #head-main header #menu-items.mobile-bar-active{
         transform: translateX(0);
     }
-
-    /* @keyframes mobile-bar-active{
-        from{
-            opacity: 0;
-            transform: translateX(100%); 
-        }
-        to{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }  */
+    #head-main header #menu-items #rede-item #container-rede{
+        position: relative;
+    }
 }
