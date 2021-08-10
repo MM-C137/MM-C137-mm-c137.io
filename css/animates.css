@@ -1,0 +1,13 @@
+.animate-navegation-bar{
+    animation-name: navegation-bar;
+    animation-duration: .3s;
+}
+
+@keyframes navegation-bar{
+    from{
+        transform: translateY(-5rem);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
