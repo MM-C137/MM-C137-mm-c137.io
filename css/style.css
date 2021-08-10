@@ -9,6 +9,25 @@ html{
     font-size: 87.5%; 
 }
 
+:root{
+    --black: #0E0E10;
+    --purple: #6418B0;
+    --dark-purple: #421470;
+}
+
+::-webkit-scrollbar{
+    width: .25rem;
+    background: #0E0E10;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6418B0;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #421470; 
+}
+
 #page-landing{
     min-height: 100vh;
     background: linear-gradient(329.54deg,#6418B0 100%, #421470 0%);
@@ -23,11 +42,15 @@ html{
     width: 100%;
     background: #0E0E10;
     box-shadow: 0px 0px 3px black;
+    
     position:fixed;
+    top: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 1000;
 }
 
 #head-main header{
@@ -79,6 +102,7 @@ html{
 
 #head-main header #menu-items #rede-item #container-rede #rede-menu{
     list-style-type: none;
+
     display: flex;
     flex-direction: column;
     gap: .75rem;
@@ -88,6 +112,8 @@ html{
     list-style-type: none;
     color: black;
     text-decoration: none;
+
+    flex-basis: content;
 
     transition: color .2s;
 }
@@ -101,6 +127,47 @@ html{
     text-decoration: none;
     
     color: white;
+}
+
+#main .content{
+    margin-top: 8rem;
+    width: 100%;
+}
+
+#main .content main #about-section section #about-content{
+    height: 463.3px;
+    background: white;
+
+    display: flex;
+}
+
+#main .content main #about-section section #about-content #about-text{
+    width: 65%;
+
+    text-align: center;
+}
+
+#main .content main #about-section section #about-content h1{
+    font-size: clamp(2rem, 10vw,4.25rem);
+    font-weight: bold;
+    color: var(--purple);
+
+    text-shadow: .5px .5px 1px black;
+}
+
+#main .content main #about-section section #about-content #about-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35%;
+}
+
+#main .content main #about-section section #about-content #about-image img{
+    height: 28rem;
+    width: 28rem;
+
+    transform: rotate(10deg)
 }
 
 @media(max-width: 600px){
@@ -138,5 +205,21 @@ html{
     }
     #head-main header #menu-items.mobile-bar-active{
         transform: translateX(0);
+    }
+    #main .content main #about-section section #about-content{   
+        display: flex;
+        flex-direction: column;
+    }
+    #main .content main #about-section section #about-content #about-text{
+        width: 100%;
+    }
+    #main .content main #about-section section #about-content #about-image{
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+    #main .content main #about-section section #about-content #about-image img{
+        height: 8rem;
+        width: 8rem;
     }
 }
